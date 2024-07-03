@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <main class="container">
     <form class="form">
       <div>
-        <span>Escribe un color de fondo en inglés</span>
+        <label>Escribe un color de fondo en inglés</label>
         <br />
         <input class="form-control ancho" v-model="colorCuadrado" />
       </div>
       <div>
-        <span>Escribe un color de letra en inglés</span>
+        <label>Escribe un color de letra en inglés</label>
         <br />
         <input class="form-control ancho" v-model="colorLetra" />
       </div>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </form>
-    <div
+    <figure
       id="cuadrado"
       :style="{
         background: colorCuadrado,
@@ -100,8 +100,8 @@
       :class="{ opaco: opaco }"
     >
       <p v-if="show">{{ texto }}</p>
-    </div>
-  </div>
+    </figure>
+  </main>
 </template>
 
 <script>
@@ -146,19 +146,6 @@ export default {
   gap: 2rem;
 }
 
-#cuadrado {
-  width: 500px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ccc;
-  margin-left: 50px;
-  overflow: auto;
-  padding: 1rem;
-  align-self: center;
-}
-
 form {
   background: darkslategray;
   color: white;
@@ -174,13 +161,26 @@ form {
   }
 }
 
-.opaco {
-  opacity: 0.5; /* o cualquier valor de opacidad que desees */
-}
-
 .ancho,
 textarea,
 select {
   width: 250px;
+}
+
+#cuadrado {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  margin-left: 50px;
+  overflow: auto;
+  padding: 1rem;
+  align-self: center;
+}
+
+.opaco {
+  opacity: 0.5; /* o cualquier valor de opacidad que desees */
 }
 </style>
