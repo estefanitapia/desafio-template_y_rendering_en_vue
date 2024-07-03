@@ -1,22 +1,19 @@
 <template>
   <main class="container">
     <form class="form">
-      <div>
-        <label>Escribe un color de fondo en inglés</label>
+      <fieldset>
+        <label class="espacio">Escribe un color de fondo en inglés</label>
         <br />
         <input class="form-control ancho" v-model="colorCuadrado" />
-      </div>
-      <div>
-        <label>Escribe un color de letra en inglés</label>
+        <br>
+        <label class="espacio">Escribe un color de letra en inglés</label>
         <br />
         <input class="form-control ancho" v-model="colorLetra" />
-      </div>
-      <div>
-        <label>Mostrar texto</label>
+        <br>
+        <label class="espacio">Mostrar texto</label>
         <input v-model="show" type="checkbox" />
-      </div>
-      <div>
-        <label for="customRange2" class="form-label ancho">Borde</label>
+        <br>
+        <label for="customRange2" class="form-label ancho espacio">Borde</label>
         <br />
         <input
           v-model="border"
@@ -27,14 +24,11 @@
           step="0.5"
           id="customRange2"
         />
-      </div>
-      <div>
-        <label>Contenido textual: </label>
+        <br>
+        <label class="espacio">Contenido textual: </label>
         <br />
         <textarea maxlength="200" v-model="texto"></textarea>
-      </div>
-      <div>
-        <label>Tipografía: </label>
+        <label class="espacio">Tipografía: </label>
         <br />
         <select v-model="typography">
           <option
@@ -45,14 +39,12 @@
             {{ tipografia }}
           </option>
         </select>
-      </div>
-
-      <div>
-        <label>Opaco</label>
+        <br>
+        <label class="espacio">Opaco</label>
         <input v-model="opaco" type="checkbox" />
-      </div>
-      <div>
-        <span>Tamaño de letra</span>
+      </fieldset>
+      <fieldset>
+        <label class="espacio">Tamaño de letra</label>
         <div class="form-check">
           <input
             class="form-check-input"
@@ -62,7 +54,7 @@
             value="1rem"
             v-model="size"
           />
-          <label class="form-check-label fw-normal" for="p"> Pequeño </label>
+          <label class="form-check-label" for="p"> Pequeño </label>
         </div>
         <div class="form-check">
           <input
@@ -73,7 +65,7 @@
             value="1.5rem"
             v-model="size"
           />
-          <label class="form-check-label fw-normal" for="m"> Mediano </label>
+          <label class="form-check-label" for="m"> Mediano </label>
         </div>
         <div class="form-check">
           <input
@@ -84,9 +76,9 @@
             value="2rem"
             v-model="size"
           />
-          <label class="form-check-label fw-normal" for="g"> Grande </label>
+          <label class="form-check-label" for="g"> Grande </label>
         </div>
-      </div>
+      </fieldset>
     </form>
     <figure
       id="cuadrado"
@@ -143,7 +135,6 @@ export default {
 .container {
   display: flex;
   align-items: stretch;
-  gap: 2rem;
 }
 
 form {
@@ -152,13 +143,8 @@ form {
   display: inline-block;
   flex-direction: flex-start;
   text-align: left;
-  gap: 15px;
   padding: 40px;
   font-size: 16px;
-
-  & > div {
-    margin-top: 1rem;
-  }
 }
 
 .ancho,
@@ -168,8 +154,8 @@ select {
 }
 
 #cuadrado {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
