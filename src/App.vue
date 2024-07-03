@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MaquetaInterfaz />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MaquetaInterfaz from './components/MaquetaInterfaz.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MaquetaInterfaz
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  background-color: black;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
