@@ -28,6 +28,7 @@
         <label class="espacio">Contenido textual: </label>
         <br />
         <textarea maxlength="200" v-model="texto"></textarea>
+        <br>
         <label class="espacio">Tipografía: </label>
         <br />
         <select v-model="typography">
