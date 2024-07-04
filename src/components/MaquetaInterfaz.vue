@@ -1,9 +1,8 @@
 <template>
   <main class="container">
-    <form class="form">
+    <form>
       <fieldset>
-        <label class="espacio">Escribe un color de fondo en inglés</label>
-        <br />
+        <legend class="espacio">Escribe un color de fondo en inglés</legend>
         <input class="form-control ancho" v-model="colorCuadrado" />
         <br>
         <label class="espacio">Escribe un color de letra en inglés</label>
@@ -45,7 +44,7 @@
         <input v-model="opaco" type="checkbox" />
       </fieldset>
       <fieldset>
-        <label class="espacio">Tamaño de letra</label>
+        <legend class="espacio">Tamaño de letra</legend>
         <div class="form-check">
           <input
             class="form-check-input"
@@ -144,8 +143,20 @@ form {
   display: inline-block;
   flex-direction: flex-start;
   text-align: left;
-  padding: 40px;
+  padding: 0.5rem;
   font-size: 16px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset, legend {
+  padding-top: 0.5rem;
+}
+
+fieldset, input, select, textarea {
+  margin-bottom: 0.5rem;
 }
 
 .ancho,
